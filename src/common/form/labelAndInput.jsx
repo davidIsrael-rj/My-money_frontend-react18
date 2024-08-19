@@ -1,8 +1,10 @@
 import React from 'react'
 import Grid from '../layout/grid'
 
-export default props => (
-    <Grid cols={props.cols}>
+export default function labelAndInput(props){
+
+    return (
+        <Grid cols={props.cols}>
         <div className='form-group'>
             <label htmlFor={props.name}>{props.label}</label>
             <input {...props.input} className='form-control'
@@ -11,3 +13,4 @@ export default props => (
         </div>
     </Grid>
 )
+}
